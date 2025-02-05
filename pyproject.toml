@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "test-automation"
+version = "0.1.0"
+description = ""
+authors = ["telez371"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.4"
+pydantic = "^2.10.6"
+
+
+[tool.poetry.group.ozon.dependencies]
+python = "^3.12"
+black = "^22.3"
+pytest = "^8.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+src_paths = ["src/service", "tests"]
+skip_glob = ["*/setup.py"]
+filter_files = true
+known_first_party = "src"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | \.log
+  | _build
+  | buck-out
+  | build
+  | dist
+  | tests/.*/setup.py
+)/
+'''
