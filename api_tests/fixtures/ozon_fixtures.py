@@ -3,9 +3,9 @@ from uuid import UUID
 
 import pytest
 
-from api_tests.core.api_client import ApiClient
 from api_tests.models.ozon_models.base import UuidRequest
-from api_tests.tests.ozon_tests.endpoints import Endpoints
+from api_tests.services.ozon.api_client import ApiClient
+from api_tests.services.ozon.endpoints import Endpoints
 
 
 @pytest.fixture(scope="session")
