@@ -39,18 +39,9 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o api_tests/allure-report
-          echo "Listing files in api_tests:"
-          ls -R api_tests
-
-      - name: Check if allure-report directory exists
-        run: |
-          if [ -d "api_tests/allure-report" ]; then
-            echo "allure-report directory exists."
-          else
-            echo "allure-report directory does not exist."
-            exit 1
-          fi
+          docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o allure-report
+          echo "Listing files in current directory:"
+          ls -R
 
       - name: Create gh-pages history directory
         run: |
@@ -58,12 +49,12 @@ jobs:
 
       - name: Update Allure history
         run: |
-          sudo cp -R api_tests/allure-report/history/* ./.github/gh-pages/history/
+          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.CI_TOKEN }}
           branch: gh-pages
-          folder: allure-report/allure-report
+          folder: allure-report
           clean: true
