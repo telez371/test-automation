@@ -36,9 +36,14 @@ jobs:
           else
             echo "No history found, skipping copy."
           fi
+
       - name: Generate Allure report
         run: |
           docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o api_tests/allure-report
+
+      - name: Create gh-pages history directory
+        run: |
+          sudo mkdir -p ./.github/gh-pages/history
 
       - name: Update Allure history
         run: |
