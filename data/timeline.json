@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "f81bad1f6f6b",
+    "children" : [ {
+      "name" : "1-MainThread",
+      "children" : [ {
+        "name" : "Test GET anything endpoint",
+        "uid" : "4e2b237d03563487",
+        "parentUid" : "b39219959d89f6c5fd5ea1e62e08425f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738945212159,
+          "stop" : 1738945215671,
+          "duration" : 3512
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Test POST anything endpoint",
+        "uid" : "850953d9c11a88b3",
+        "parentUid" : "b39219959d89f6c5fd5ea1e62e08425f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738945211740,
+          "stop" : 1738945212158,
+          "duration" : 418
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b39219959d89f6c5fd5ea1e62e08425f"
+    } ],
+    "uid" : "6aaddd8bfa0940c955c8934c18fa336d"
+  } ]
+}
