@@ -10,5 +10,5 @@ services:
     image: test-automation:ozon
     volumes:
       - ./:/app
-    command: poetry run pytest -s api_tests/services/ozon/tests
+    command: poetry run pytest -s api_tests/services/ozon/tests --alluredir=api_tests/allure-results
     working_dir: /app
