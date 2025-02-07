@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "name": "API Response Errors",
+      "matchedStatuses": ["failed"],
+      "messageRegex": ".*status_code.*"
+    },
+    {
+      "name": "Data Validation Errors",
+      "matchedStatuses": ["failed"],
+      "messageRegex": ".*validate.*|.*validation.*"
+    },
+    {
+      "name": "UUID Generation Issues",
+      "matchedStatuses": ["broken", "failed"],
+      "messageRegex": ".*UUID.*|.*uuid.*"
+    }
+  ]
+}
