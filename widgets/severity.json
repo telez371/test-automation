@@ -1,20 +1,20 @@
 [ {
-  "uid" : "60f512f0b369544a",
+  "uid" : "3f8971e72b954589",
   "name" : "Test POST anything endpoint",
   "time" : {
-    "start" : 1738946195652,
-    "stop" : 1738946195658,
-    "duration" : 6
+    "start" : 1738947180608,
+    "stop" : 1738947180679,
+    "duration" : 71
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "55e9b42c41e126d",
+  "uid" : "9c45a654111f986b",
   "name" : "Test GET anything endpoint",
   "time" : {
-    "start" : 1738946195660,
-    "stop" : 1738946196105,
-    "duration" : 445
+    "start" : 1738947180680,
+    "stop" : 1738947181067,
+    "duration" : 387
   },
   "status" : "passed",
   "severity" : "normal"
