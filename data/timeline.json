@@ -2,38 +2,38 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "f81bad1f6f6b",
+    "name" : "29ce81e08c13",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
         "name" : "Test GET anything endpoint",
-        "uid" : "4e2b237d03563487",
-        "parentUid" : "b39219959d89f6c5fd5ea1e62e08425f",
+        "uid" : "a72ee2891e9bbd28",
+        "parentUid" : "340a420e56382edd62b1e324fdb0c253",
         "status" : "passed",
         "time" : {
-          "start" : 1738945212159,
-          "stop" : 1738945215671,
-          "duration" : 3512
+          "start" : 1738945454172,
+          "stop" : 1738945454884,
+          "duration" : 712
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Test POST anything endpoint",
-        "uid" : "850953d9c11a88b3",
-        "parentUid" : "b39219959d89f6c5fd5ea1e62e08425f",
+        "uid" : "f8e4d7eb44f5fa78",
+        "parentUid" : "340a420e56382edd62b1e324fdb0c253",
         "status" : "passed",
         "time" : {
-          "start" : 1738945211740,
-          "stop" : 1738945212158,
-          "duration" : 418
+          "start" : 1738945454148,
+          "stop" : 1738945454171,
+          "duration" : 23
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "b39219959d89f6c5fd5ea1e62e08425f"
+      "uid" : "340a420e56382edd62b1e324fdb0c253"
     } ],
-    "uid" : "6aaddd8bfa0940c955c8934c18fa336d"
+    "uid" : "f473e283f4fc1098d95e9535979156e6"
   } ]
 }
