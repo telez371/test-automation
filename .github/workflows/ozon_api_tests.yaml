@@ -28,13 +28,17 @@ jobs:
         run: |
           docker-compose up --abort-on-container-exit --exit-code-from api-tests-ozon || true
 
+      - name: Copy history if it exists
+        run: |
+          sudo mkdir -p api_tests/allure-results/history
+          if [ -d ./.github/gh-pages/history ]; then
+            sudo cp -R ./.github/gh-pages/history/* api_tests/allure-results/history/
+          else
+            echo "No history found, skipping copy."
+          fi
       - name: Generate Allure report
         run: |
           docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o api_tests/allure-report
-
-      - name: Ensure gh-pages directory exists
-        run: |
-          mkdir -p ./.github/gh-pages/history
 
       - name: Update Allure history
         run: |
