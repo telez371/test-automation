@@ -40,6 +40,17 @@ jobs:
       - name: Generate Allure report
         run: |
           docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o api_tests/allure-report
+          echo "Listing files in api_tests:"
+          ls -R api_tests
+
+      - name: Check if allure-report directory exists
+        run: |
+          if [ -d "api_tests/allure-report" ]; then
+            echo "allure-report directory exists."
+          else
+            echo "allure-report directory does not exist."
+            exit 1
+          fi
 
       - name: Create gh-pages history directory
         run: |
