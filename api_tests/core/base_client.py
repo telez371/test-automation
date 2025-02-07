@@ -2,11 +2,11 @@ from typing import Optional, Dict, Any
 
 import requests
 
-from api_tests.core.config import Config
+from api_tests.core.base_config import BaseConfig
 
 
-class ApiClient:
-    def __init__(self, config: Config):
+class BaseClient:
+    def __init__(self, config: BaseConfig):
         self.base_url = config.BASE_URL
         self.session = requests.Session()
         self.default_headers = {
