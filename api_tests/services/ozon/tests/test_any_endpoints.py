@@ -4,8 +4,8 @@ from uuid import UUID
 import allure
 import pytest
 
-from api_tests.core.base_client import BaseClient
 from api_tests.models.ozon_models.base import UuidRequest, UuidResponse
+from api_tests.services.ozon.api_client import ApiClient
 from api_tests.services.ozon.endpoints import Endpoints
 
 
@@ -18,7 +18,7 @@ class TestRequests:
     @allure.story("POST Requests")
     @allure.title("Test POST anything endpoint")
     @allure.severity(allure.severity_level.NORMAL)
-    def test_post_anything(self, api_client: BaseClient, uuid_from_response: UUID) -> None:
+    def test_post_anything(self, api_client: ApiClient, uuid_from_response: UUID) -> None:
         with allure.step("Prepare request payload"):
             payload = UuidRequest(uuid=uuid_from_response).model_dump(mode="json")
             allure.attach(str(payload), "Request Payload", allure.attachment_type.JSON)
@@ -42,7 +42,7 @@ class TestRequests:
     @allure.story("GET Requests")
     @allure.title("Test GET anything endpoint")
     @allure.severity(allure.severity_level.NORMAL)
-    def test_get_anything(self, api_client: BaseClient, uuid_from_response: UUID) -> None:
+    def test_get_anything(self, api_client: ApiClient, uuid_from_response: UUID) -> None:
         with allure.step("Prepare request parameters"):
             payload = UuidRequest(uuid=uuid_from_response).model_dump(mode="json")
             allure.attach(str(payload), "Request Parameters", allure.attachment_type.JSON)

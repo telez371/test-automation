@@ -1,0 +1,60 @@
+name: OZON Api Tests
+
+on: [push]
+
+jobs:
+  ozon-api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Docker and Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            apt-transport-https \
+            ca-certificates \
+            curl \
+            gnupg \
+            lsb-release
+          
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+          
+          sudo apt-get update
+          sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
+
+      - name: Run OZON Api Tests via docker-compose
+        run: |
+          docker-compose up --abort-on-container-exit --exit-code-from api-tests-ozon || true
+
+      - name: Copy history if it exists
+        run: |
+          sudo mkdir -p api_tests/allure-results/history
+          if [ -d ./.github/gh-pages/history ]; then
+            sudo cp -R ./.github/gh-pages/history/* api_tests/allure-results/history/
+          else
+            echo "No history found, skipping copy."
+          fi
+
+      - name: Generate Allure report
+        run: |
+          docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results --clean -o allure-report
+          echo "Listing files in current directory:"
+          ls -R
+
+      - name: Create gh-pages history directory
+        run: |
+          sudo mkdir -p ./.github/gh-pages/history
+
+      - name: Update Allure history
+        run: |
+          sudo cp -R allure-report/history/* ./.github/gh-pages/history/
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: true
