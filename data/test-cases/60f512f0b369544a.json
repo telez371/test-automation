@@ -1,12 +1,12 @@
 {
-  "uid" : "a72ee2891e9bbd28",
-  "name" : "Test GET anything endpoint",
-  "fullName" : "services.ozon.tests.test_any_endpoints.TestRequests#test_get_anything",
-  "historyId" : "2f5776a7c0fabafc1c9aeb32df6cd079",
+  "uid" : "60f512f0b369544a",
+  "name" : "Test POST anything endpoint",
+  "fullName" : "services.ozon.tests.test_any_endpoints.TestRequests#test_post_anything",
+  "historyId" : "8e8571785f8b8cd394f99bbb29f3356f",
   "time" : {
-    "start" : 1738945454172,
-    "stop" : 1738945454884,
-    "duration" : 712
+    "start" : 1738946195652,
+    "stop" : 1738946195658,
+    "duration" : 6
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,24 +14,24 @@
   "beforeStages" : [ {
     "name" : "Get UUID fixture",
     "time" : {
-      "start" : 1738945452499,
-      "stop" : 1738945454147,
-      "duration" : 1648
+      "start" : 1738946195636,
+      "stop" : 1738946195652,
+      "duration" : 16
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Send GET request to UUID endpoint",
       "time" : {
-        "start" : 1738945452499,
-        "stop" : 1738945454147,
-        "duration" : 1648
+        "start" : 1738946195636,
+        "stop" : 1738946195652,
+        "duration" : 16
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "fc1241403e3f7606",
+        "uid" : "dfb48fb2383cbe00",
         "name" : "Response",
-        "source" : "fc1241403e3f7606.json",
+        "source" : "dfb48fb2383cbe00.json",
         "type" : "application/json",
         "size" : 53
       } ],
@@ -43,8 +43,8 @@
     }, {
       "name" : "Verify response status code",
       "time" : {
-        "start" : 1738945454147,
-        "stop" : 1738945454147,
+        "start" : 1738946195652,
+        "stop" : 1738946195652,
         "duration" : 0
       },
       "status" : "passed",
@@ -58,16 +58,16 @@
     }, {
       "name" : "Parse and validate UUID from response",
       "time" : {
-        "start" : 1738945454147,
-        "stop" : 1738945454147,
+        "start" : 1738946195652,
+        "stop" : 1738946195652,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "3b74a2ff972f3e04",
+        "uid" : "aca2b1e262202639",
         "name" : "Parsed UUID Data",
-        "source" : "3b74a2ff972f3e04.json",
+        "source" : "aca2b1e262202639.json",
         "type" : "application/json",
         "size" : 54
       } ],
@@ -86,8 +86,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1738945452499,
-      "stop" : 1738945452499,
+      "start" : 1738946195636,
+      "stop" : 1738946195636,
       "duration" : 0
     },
     "status" : "passed",
@@ -102,18 +102,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Prepare request parameters",
+      "name" : "Prepare request payload",
       "time" : {
-        "start" : 1738945454172,
-        "stop" : 1738945454172,
+        "start" : 1738946195652,
+        "stop" : 1738946195652,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "10b866a8c6079f39",
-        "name" : "Request Parameters",
-        "source" : "10b866a8c6079f39.json",
+        "uid" : "c03706a09642a78b",
+        "name" : "Request Payload",
+        "source" : "c03706a09642a78b.json",
         "type" : "application/json",
         "size" : 48
       } ],
@@ -123,20 +123,20 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "Send GET request",
+      "name" : "Send POST request",
       "time" : {
-        "start" : 1738945454172,
-        "stop" : 1738945454883,
-        "duration" : 711
+        "start" : 1738946195653,
+        "stop" : 1738946195658,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "6aec422ec855f464",
+        "uid" : "394d4381a2f30078",
         "name" : "Response",
-        "source" : "6aec422ec855f464.json",
+        "source" : "394d4381a2f30078.json",
         "type" : "application/json",
-        "size" : 545
+        "size" : 581
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -146,8 +146,8 @@
     }, {
       "name" : "Verify response status code",
       "time" : {
-        "start" : 1738945454883,
-        "stop" : 1738945454883,
+        "start" : 1738946195658,
+        "stop" : 1738946195658,
         "duration" : 0
       },
       "status" : "passed",
@@ -161,18 +161,18 @@
     }, {
       "name" : "Validate response data",
       "time" : {
-        "start" : 1738945454883,
-        "stop" : 1738945454884,
-        "duration" : 1
+        "start" : 1738946195658,
+        "stop" : 1738946195658,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "bfab35c145a083d7",
+        "uid" : "65285c01ab7ee384",
         "name" : "Validated Response Data",
-        "source" : "bfab35c145a083d7.json",
+        "source" : "65285c01ab7ee384.json",
         "type" : "application/json",
-        "size" : 484
+        "size" : 511
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -189,20 +189,20 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "epic",
-    "value" : "Ozon Service"
-  }, {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
-    "name" : "story",
-    "value" : "GET Requests"
-  }, {
     "name" : "feature",
     "value" : "Request Testing"
   }, {
     "name" : "owner",
     "value" : "Aleksandr"
+  }, {
+    "name" : "story",
+    "value" : "POST Requests"
+  }, {
+    "name" : "epic",
+    "value" : "Ozon Service"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "tag",
     "value" : "ozon"
@@ -217,7 +217,7 @@
     "value" : "TestRequests"
   }, {
     "name" : "host",
-    "value" : "29ce81e08c13"
+    "value" : "3ea0679bf0c5"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -245,6 +245,6 @@
     "categories" : [ ],
     "tags" : [ "ozon" ]
   },
-  "source" : "a72ee2891e9bbd28.json",
+  "source" : "60f512f0b369544a.json",
   "parameterValues" : [ ]
 }

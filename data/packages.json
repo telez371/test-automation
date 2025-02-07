@@ -5,26 +5,26 @@
     "name" : "services.ozon.tests.test_any_endpoints",
     "children" : [ {
       "name" : "Test POST anything endpoint",
-      "uid" : "f8e4d7eb44f5fa78",
+      "uid" : "60f512f0b369544a",
       "parentUid" : "bff5d9cb006526d8423bb8d34a7e61ec",
       "status" : "passed",
       "time" : {
-        "start" : 1738945454148,
-        "stop" : 1738945454171,
-        "duration" : 23
+        "start" : 1738946195652,
+        "stop" : 1738946195658,
+        "duration" : 6
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Test GET anything endpoint",
-      "uid" : "a72ee2891e9bbd28",
+      "uid" : "55e9b42c41e126d",
       "parentUid" : "bff5d9cb006526d8423bb8d34a7e61ec",
       "status" : "passed",
       "time" : {
-        "start" : 1738945454172,
-        "stop" : 1738945454884,
-        "duration" : 712
+        "start" : 1738946195660,
+        "stop" : 1738946196105,
+        "duration" : 445
       },
       "flaky" : false,
       "newFailed" : false,

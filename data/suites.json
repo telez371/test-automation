@@ -9,26 +9,26 @@
         "name" : "TestRequests",
         "children" : [ {
           "name" : "Test POST anything endpoint",
-          "uid" : "f8e4d7eb44f5fa78",
+          "uid" : "60f512f0b369544a",
           "parentUid" : "e17f05e8653a630ca4da8f791ac0387d",
           "status" : "passed",
           "time" : {
-            "start" : 1738945454148,
-            "stop" : 1738945454171,
-            "duration" : 23
+            "start" : 1738946195652,
+            "stop" : 1738946195658,
+            "duration" : 6
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Test GET anything endpoint",
-          "uid" : "a72ee2891e9bbd28",
+          "uid" : "55e9b42c41e126d",
           "parentUid" : "e17f05e8653a630ca4da8f791ac0387d",
           "status" : "passed",
           "time" : {
-            "start" : 1738945454172,
-            "stop" : 1738945454884,
-            "duration" : 712
+            "start" : 1738946195660,
+            "stop" : 1738946196105,
+            "duration" : 445
           },
           "flaky" : false,
           "newFailed" : false,
