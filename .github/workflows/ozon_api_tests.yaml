@@ -30,8 +30,7 @@ jobs:
 
       - name: Generate Allure report
         run: |
-          docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results -o api_tests/allure-report --clean
-
+          docker-compose run --rm api-tests-ozon allure generate api_tests/allure-results -o ./allure-report --clean
       - name: Ensure gh-pages directory exists
         run: |
           mkdir -p ./.github/gh-pages/history
